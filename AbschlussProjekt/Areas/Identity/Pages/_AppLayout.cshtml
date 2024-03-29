@@ -22,7 +22,7 @@
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="col-10 my-4">
-                        @RenderBody()
+                       @RenderBody()
                     </div>
                 </div>
             </div>
@@ -30,17 +30,17 @@
     </div>
 </dic>
 
-@section Scripts {
+@section Scripts{
     @await RenderSectionAsync("Scripts", required: false)
     <script>
-        $(function () {
+        $(function (){
             const currentPage = location.pathname;
             $('.nav-tabs li a').each(function () {
                 const $this = $(this);
-                if () {
-
+                if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) !== -1 {
+                    $this.addClass('active');
                 }
             })
-        } )
+        })
     </script>
 }                
